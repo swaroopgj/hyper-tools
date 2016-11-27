@@ -1,28 +1,35 @@
-from matplotlib import style
-import scipy.io as sio
 import numpy as np
+<<<<<<< HEAD
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import scipy
 from scipy.interpolate import PchipInterpolator as pchip
 from mpl_toolkits.mplot3d import Axes3D
 import hyperalign as hyp
+=======
+>>>>>>> 71f5a3da4751783d9d54923142580348108437ee
 from sklearn.decomposition import PCA
-import trollius
-from trollius import From
 import csv
-import os
 import time
 
 
 def stream(raw_file, pca_file, seconds, rate):
 
     ##VARIABLES##
+<<<<<<< HEAD
 
     required_lines=seconds*rate #required lines before computing PCA
     sleep_secs=1/rate #seconds to sleep before checking for new data
     head=6 #number of header rows
     chan=1 #number of leading channel-info cols
+=======
+    
+    required_lines = np.ceil(seconds*rate) #required lines before computing PCA
+
+    sleep_secs = 1.0 / rate #seconds to sleep before checking for new data
+    head = 3 #number of header rows
+    chan = 1 #number of leading channel-info cols
+>>>>>>> 71f5a3da4751783d9d54923142580348108437ee
 
     #session_secs=600
     #set this parameter and change commenting in last while loop for predefined session length
