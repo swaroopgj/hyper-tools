@@ -27,7 +27,7 @@ def reduc(x, ndim):
 	def is_list(x):
 		if type(x[0][0])==np.ndarray:
 			return True
-		elif type(x[0][0])==np.int64:
+		elif type(x[0][0])==np.int64 or type(x[0][0])==np.float32:
 			return False
 
 	def reduceD(x, ndim):	
